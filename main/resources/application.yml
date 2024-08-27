@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: hazelcast-service
+  cloud:
+    config:
+      enabled: true
+  service:
+    registry:
+      auto-registration:
+        enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://<eureka-server-url>:8761/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
